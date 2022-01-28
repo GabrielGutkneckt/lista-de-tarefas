@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Minhas Tarefas</title>
+      <style>
+        body{
+          background-color: bisque;
+        
+        }
+        h1{
+            font-family: fantasy;
+            color: rgb(0, 2, 2);
+            text-align: center;
+        }
+        .box{
+
+            width: 700px;
+            height: 800px;
+            margin-left: 17%;
+            margin-right: 17%;
+            min-height: 100%;
+        }
+        button{
+            text-align: center;
+        }
+        .boxlist{
+            border: 5px solid black;
+            width: 500px;
+            height: 600px;
+            overflow: auto;
+            margin-left: 14%;
+        }
+        .boxinput{
+            margin-left: 35%;
+        }
+        button{
+            border-radius: 5px;
+        }
+    </style>
+  </head>
+<body>
+    <div class="box"> 
+    <h1>Lista de tarefas</h1>
+    <div class="boxlist">
+        <ul>
+         
+        </ul>
+    </div>
+    <div class="boxinput">
+    <input placeholder="Insira uma tarefa aqui">
+    <button onclick="add()">Adicionar</button>
+    </div>
+    <script>
+        function add(){
+        const ul = document.querySelector("ul")
+        const input = document.querySelector("input")
+        const tarefa = input.value
+        
+        const li = document.createElement("li")
+        li.innerText = tarefa
+        ul.appendChild(li)
+
+        input.value = ""
+        }
+    </script>
+</body>
+
+</html>
